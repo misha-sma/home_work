@@ -19,8 +19,6 @@ public class BookAuthorDao {
 				ps.addBatch();
 			}
 			ps.executeBatch();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

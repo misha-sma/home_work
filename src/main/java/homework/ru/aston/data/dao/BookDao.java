@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import homework.ru.aston.data.DBConnection;
-import homework.ru.aston.data.entity.AuthorBookPublisher;
+import homework.ru.aston.data.dto.AuthorBookPublisherDto;
 import homework.ru.aston.data.entity.Book;
 
 public class BookDao {
@@ -30,24 +30,20 @@ public class BookDao {
 				book.setIdBook(rs.getInt("id_book"));
 			}
 			rs.close();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
 
-	public static List<AuthorBookPublisher> getAllBooks() {
-		List<AuthorBookPublisher> result = new ArrayList<AuthorBookPublisher>();
+	public static List<AuthorBookPublisherDto> getAllBooks() {
+		List<AuthorBookPublisherDto> result = new ArrayList<AuthorBookPublisherDto>();
 		try (Connection con = DBConnection.getDbConnection();
 				PreparedStatement ps = con.prepareStatement(GET_BOOKS_BY_AUTHORS);
 				ResultSet rs = ps.executeQuery()) {
 			while (rs.next()) {
-				result.add(new AuthorBookPublisher(rs.getString("author_name"), rs.getString("title"),
+				result.add(new AuthorBookPublisherDto(rs.getString("author_name"), rs.getString("title"),
 						rs.getString("publisher_name")));
 			}
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

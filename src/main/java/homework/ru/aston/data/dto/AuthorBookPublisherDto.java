@@ -1,6 +1,4 @@
-package homework.ru.aston.data.entity;
-
-import java.util.List;
+package homework.ru.aston.data.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,8 +9,8 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class AddBookEntity {
+public class AuthorBookPublisherDto {
+	private String authorName;
 	private String title;
 	private String publisherName;
-	private List<String> authors;
 }

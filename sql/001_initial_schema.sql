@@ -45,8 +45,8 @@ select authors.name as author_name, t2.title, t2.name as publisher_name from aut
 on books_authors.id_book=t1.id_book) as t2
 on authors.id_author=t2.id_author order by authors.name, t2.title;
 
-curl -X POST -H 'Content-Type: application/json' http://localhost:8080/addBook -d '{
-  "title": "The Lord of the Rings",
-  "publisherName": "Elsevier",
-  "authors": ["Vasily", "Tolkien"]
+curl -X POST -H 'Content-Type: application/json' http://localhost:8080/books -d '{
+  "title": "Book about fisher and fish",
+  "publisherName": "Academic study press",
+  "authors": ["Mikle", "Pushkin"]
 }'

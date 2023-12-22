@@ -22,8 +22,6 @@ public class PublisherDao {
 				idPublisher = rs.getInt("id_publisher");
 			}
 			rs.close();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -40,8 +38,6 @@ public class PublisherDao {
 				result = new Publisher(rs.getInt("id_publisher"), rs.getString("name"));
 			}
 			rs.close();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

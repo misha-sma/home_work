@@ -22,8 +22,6 @@ public class AuthorDao {
 				idAuthor = rs.getInt("id_author");
 			}
 			rs.close();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -40,8 +38,6 @@ public class AuthorDao {
 				result = new Author(rs.getInt("id_author"), rs.getString("name"));
 			}
 			rs.close();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
