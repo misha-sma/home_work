@@ -11,8 +11,11 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class AddBookDto {
+public class AddPublicationDto {
 	private String title;
 	private String publisherName;
 	private List<String> authors;
+	private String type;
+	private String isbn;
+	private String issn;
 }
