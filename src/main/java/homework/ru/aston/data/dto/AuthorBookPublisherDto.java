@@ -13,4 +13,7 @@ public class AuthorBookPublisherDto {
 	private String authorName;
 	private String title;
 	private String publisherName;
+	private String isbn;
+	private String issn;
+	private String dType;
 }

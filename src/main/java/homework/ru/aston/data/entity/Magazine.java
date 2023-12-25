@@ -14,8 +14,8 @@ import lombok.Setter;
 @Setter
 
 @Entity
-@DiscriminatorValue("book")
-public class Book extends Publication {
-	@Column(name = "isbn")
-	private String isbn;
+@DiscriminatorValue("magazine")
+public class Magazine extends Publication {
+	@Column(name = "issn")
+	private String issn;
 }
