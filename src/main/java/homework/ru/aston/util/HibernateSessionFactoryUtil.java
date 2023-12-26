@@ -6,6 +6,7 @@ import org.hibernate.cfg.Configuration;
 
 import homework.ru.aston.data.entity.Author;
 import homework.ru.aston.data.entity.Book;
+import homework.ru.aston.data.entity.EntityForIndex;
 import homework.ru.aston.data.entity.Magazine;
 import homework.ru.aston.data.entity.Publication;
 import homework.ru.aston.data.entity.Publisher;
@@ -25,6 +26,7 @@ public class HibernateSessionFactoryUtil {
 				configuration.addAnnotatedClass(Publication.class);
 				configuration.addAnnotatedClass(Book.class);
 				configuration.addAnnotatedClass(Magazine.class);
+				configuration.addAnnotatedClass(EntityForIndex.class);
 				StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
 						.applySettings(configuration.getProperties());
 				sessionFactory = configuration.buildSessionFactory(builder.build());

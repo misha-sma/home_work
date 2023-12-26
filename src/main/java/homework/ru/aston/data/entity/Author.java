@@ -40,5 +40,5 @@ public class Author {
 	@JoinTable(name = "publications_authors", 
 	    joinColumns = @JoinColumn(name = "id_author", referencedColumnName = "id_author"), 
 	    inverseJoinColumns = @JoinColumn(name = "id_publication", referencedColumnName = "id_publication"))
-	private List<Book> books;
+	private List<Publication> publications;
 }
